@@ -1,0 +1,51 @@
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.title {
+  color: rgb(223, 149, 39);
+  font-size: 24px;
+}
+
+.container-1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.box {
+  border: 2px solid red;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+.font1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.font2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.base {
+  background-color: red;
+}
+
+.important {
+  background-color: brown;
+}
+
+.warning {
+  background-color: pink;
+}
+
+.shadow {
+  box-shadow: 15px 15px 20px 5px rgba(97, 89, 97, 0.79);
+}
+
+/*# sourceMappingURL=/mystyle.2a803f8a.css.map */

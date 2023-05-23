@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title-container {
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  display: flex;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.card {
+  color: #1f1e1e;
+  grid-gap: 10px;
+  border: 3px solid #000;
+  border-radius: 15px;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: 300px 300px;
+  grid-template-areas: "picture picture"
+                       "headline ."
+                       "textbox textbox"
+                       ". published"
+                       "button button";
+  display: inline-grid;
+  box-shadow: 10px 10px 33px;
+}
+
+.picture-container {
+  grid-area: picture;
+}
+
+.title {
+  grid-area: headline;
+}
+
+.textbox {
+  grid-area: textbox;
+  margin-left: 5px;
+}
+
+.published {
+  grid-area: published;
+  place-self: flex-end;
+  margin-right: 5px;
+}
+
+.button-container {
+  grid-area: button;
+}
+
+.headline {
+  margin-left: 5px;
+  font-family: Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.boton {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
+.picture {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+/*# sourceMappingURL=index.8a890e6f.css.map */
