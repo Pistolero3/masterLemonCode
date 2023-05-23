@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Roboto:wght@400;700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.appContainer {
+  background-color: #141414;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #141414;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2em;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.popularNumber {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.popularNumber::before {
+  content: "5";
+}
+
+.section-title2 {
+  display: none;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.header-buttons > div {
+  padding: 1rem;
+}
+
+.header-buttons > div:hover {
+  background-color: white;
+  color: blue;
+  padding: 1rem;
+}
+
+main {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.top-item {
+  min-width: 225px;
+}
+
+.first,
+.second {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.item {
+  min-width: 250px;
+  flex: 1;
+  transition: min-width 1s;
+}
+
+.item:hover {
+  min-width: 350px;
+  opacity: 80%;
+  transition: min-width 1s;
+}
+
+.item > img,
+.top-item > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .platform-title {
+    display: none;
+  }
+
+  .top-item:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .popularNumber::before {
+    content: "3";
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}

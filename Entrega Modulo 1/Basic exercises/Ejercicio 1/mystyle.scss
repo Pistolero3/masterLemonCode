@@ -1,0 +1,80 @@
+$backgroundColor: green;
+$light: 1;
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.title {
+  color: green;
+  font-size: 24px;
+}
+
+.container-1 {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin: 25px;
+}
+
+.container-2 {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin: 25px;
+}
+
+.color-box-text {
+  border: 2px solid red;
+  padding: 20px 5px;
+  background-color: $backgroundColor;
+  color: white;
+}
+
+.color-box-text2 {
+  border: 2px solid red;
+  padding: 20px 5px;
+  background-color: red;
+  color: white;
+}
+
+@for $i from 1 through 4 {
+  .box-darken-#{$i} > .color-box-text {
+    $light: 4 * $i;
+    background-color: darken($backgroundColor, $light);
+  }
+}
+
+@for $i from 1 through 4 {
+  .box-lighten-#{$i} > .color-box-text {
+    $light: 10 * $i;
+    background-color: lighten($backgroundColor, $light);
+  }
+}
+
+@for $i from 1 through 4 {
+  .box-darken-#{$i} > .color-box-text2 {
+    $backgroundColor: red;
+    $light: 4 * $i;
+    background-color: darken($backgroundColor, $light);
+  }
+}
+
+@for $i from 1 through 4 {
+  .box-lighten-#{$i} > .color-box-text2 {
+    $backgroundColor: red;
+    $light: 10 * $i;
+    background-color: lighten($backgroundColor, $light);
+  }
+}

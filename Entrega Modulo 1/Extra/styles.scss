@@ -1,0 +1,156 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-title {
+  background-color: rgb(209, 219, 9);
+  color: white;
+  padding: 15px;
+}
+
+.pageContainer {
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-template-rows: auto;
+  grid-template-areas: "nave main main main";
+}
+
+nav {
+  grid-area: nave;
+  background-color: rgb(13, 91, 13);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  transition: all 3s linear;
+  position: sticky;
+  top: 0;
+}
+
+.menu-title {
+  font-weight: bold;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.menu-options {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 3px;
+  width: 100%;
+  background-color: beige;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+  position: sticky;
+  top: 38.5px;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 5px;
+  border-top: 1px solid grey;
+  box-sizing: border-box;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(243, 240, 237);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  background-color: white;
+  margin: 20px 10px;
+  padding: 30px 40px;
+  width: 200px;
+  height: 165px;
+}
+
+.member-name {
+  text-align: center;
+}
+
+img {
+  margin: 15px;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: rgb(230, 233, 149);
+  padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .pageContainer {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto);
+    grid-template-areas:
+      "nave"
+      "main";
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+  .menu-options {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    transition: background-color 5s linear;
+  }
+
+  .menu-item {
+    border: 1px solid grey;
+    background-color: beige;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    transition: flex-direction 5s linear;
+  }
+
+  .card {
+    width: 100%;
+    margin: 5px 15px;
+    transition: width 3s linear;
+  }
+}
