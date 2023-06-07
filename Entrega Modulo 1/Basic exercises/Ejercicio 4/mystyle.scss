@@ -35,8 +35,13 @@ body {
   grid-area: picture;
 }
 
-.title {
+.headline {
   grid-area: headline;
+  font-weight: bold;
+  font-size: 2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-left: 5px;
 }
 
 .textbox {
@@ -52,14 +57,6 @@ body {
 
 .button-container {
   grid-area: button;
-}
-
-.headline {
-  font-weight: bold;
-  font-size: 2em;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  margin-left: 5px;
 }
 
 .boton {

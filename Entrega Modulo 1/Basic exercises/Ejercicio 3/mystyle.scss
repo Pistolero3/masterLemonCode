@@ -1,6 +1,6 @@
 body {
   padding: 0;
-  margin: 10px;
+  margin: 0;
 }
 
 .title-container {
@@ -22,10 +22,10 @@ body {
 }
 
 .box {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
-.activities {
+.box:hover {
   background-color: rgb(13, 58, 43);
 }
 
@@ -38,14 +38,10 @@ body {
     color: white;
   }
 
-  .home {
+  .box:hover {
     background-color: rgb(13, 58, 43);
     width: 100%;
-    box-sizing: border-box;
     text-align: center;
-  }
-
-  .activities {
-    background-color: rgb(49, 117, 110);
+    padding: 10px 0;
   }
 }

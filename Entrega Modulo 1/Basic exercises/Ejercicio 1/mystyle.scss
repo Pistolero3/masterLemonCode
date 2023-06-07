@@ -1,5 +1,5 @@
 $backgroundColor: green;
-$light: 1;
+$light: 5;
 
 body {
   display: flex;
@@ -51,30 +51,26 @@ body {
 
 @for $i from 1 through 4 {
   .box-darken-#{$i} > .color-box-text {
-    $light: 4 * $i;
-    background-color: darken($backgroundColor, $light);
+    background-color: darken($backgroundColor, $light * $i);
   }
 }
 
 @for $i from 1 through 4 {
   .box-lighten-#{$i} > .color-box-text {
-    $light: 10 * $i;
-    background-color: lighten($backgroundColor, $light);
+    background-color: lighten($backgroundColor, $light * $i);
   }
 }
 
 @for $i from 1 through 4 {
   .box-darken-#{$i} > .color-box-text2 {
     $backgroundColor: red;
-    $light: 4 * $i;
-    background-color: darken($backgroundColor, $light);
+    background-color: darken($backgroundColor, $light * $i);
   }
 }
 
 @for $i from 1 through 4 {
   .box-lighten-#{$i} > .color-box-text2 {
     $backgroundColor: red;
-    $light: 10 * $i;
-    background-color: lighten($backgroundColor, $light);
+    background-color: lighten($backgroundColor, $light * $i);
   }
 }
