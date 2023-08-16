@@ -1,0 +1,14 @@
+<div class="layout">
+  <!-- Header -->
+  <app-publicheader *ngIf="!isLogged"></app-publicheader>
+  <app-private-header *ngIf="isLogged"></app-private-header>
+
+  <!-- Main -->
+  <div class="content" role="main">
+    <div *ngIf="isRootUrl" class="background-image"></div>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div>

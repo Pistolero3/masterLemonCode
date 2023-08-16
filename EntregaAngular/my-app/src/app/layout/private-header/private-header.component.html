@@ -1,0 +1,18 @@
+<div class="header" role="banner">
+  <img
+    width="40"
+    alt="myAppLogo"
+    src="https://e1.pxfuel.com/desktop-wallpaper/916/606/desktop-wallpaper-great-games-the-legend-of-zelda-nintendo-was-worried-about-how-an%E2%80%A6-zelda-logo.jpg"
+  />
+  <span>Welcome {{ user }}! Hyrule is open to discover</span>
+  <div class="spacer"></div>
+  <app-link-button routerLink="/home" label="Home"></app-link-button>
+  <app-link-button routerLink="/gallery" label="Gallery"></app-link-button>
+  <app-link-button routerLink="/profile" label="Profile"></app-link-button>
+  <app-link-button routerLink="/about" label="About Us"></app-link-button>
+  <app-link-button
+    (click)="onLogout()"
+    routerLink="/logout"
+    label="Logout"
+  ></app-link-button>
+</div>

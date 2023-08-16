@@ -1,0 +1,19 @@
+.spacer {
+  flex: 1;
+}
+
+.header {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #e8ed9a;
+  color: rgb(120, 129, 227);
+  font-weight: 600;
+  gap: 5px;
+  width: 100vw;
+}
+
+.header img {
+  margin: 0 16px;
+  width: 75px;
+}

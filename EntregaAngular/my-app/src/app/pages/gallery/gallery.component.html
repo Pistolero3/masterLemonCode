@@ -1,0 +1,77 @@
+<div class="gallery">
+  <div
+    class="selected-image"
+    [style.width.px]="imageSize"
+    [style.height.px]="imageHeight"
+  >
+    <!-- Parte 1: Imagen seleccionada -->
+    <div class="image-wrapper">
+      <img rotate="0" [src]="selectedImage.src" [alt]="selectedImage.title" />
+    </div>
+  </div>
+  <div class="image-list">
+    <!-- Parte 2: Listado de imágenes -->
+    <div
+      *ngFor="
+        let image of images
+          | slice
+            : currentPageIndex * pageSize
+            : (currentPageIndex + 1) * pageSize;
+        let i = index
+      "
+      [class.active]="image.id === selectedImage.id"
+      (click)="selectImage(image)"
+    >
+      <img [src]="image.src" [alt]="image.title" />
+    </div>
+  </div>
+  <div class="controls">
+    <!-- Parte 3: Botonera -->
+    <button
+      (click)="previousImage()"
+      [disabled]="isFirstImage()"
+      [ngClass]="{ 'disabled-button': isFirstImage() }"
+    >
+      Anterior
+    </button>
+    <button
+      (click)="nextImage()"
+      [disabled]="isLastImage()"
+      [ngClass]="{ 'disabled-button': isLastImage() }"
+    >
+      Siguiente
+    </button>
+    <button
+      (click)="increaseSize()"
+      [disabled]="imageSize === 700"
+      [ngClass]="{ 'disabled-button': imageSize === 700 }"
+    >
+      Aumentar
+    </button>
+    <button
+      (click)="decreaseSize()"
+      [disabled]="imageSize === 300"
+      [ngClass]="{ 'disabled-button': imageSize === 300 }"
+    >
+      Disminuir
+    </button>
+    <button
+      (click)="goToPreviousPage()"
+      [disabled]="currentPageIndex === 0"
+      [ngClass]="{ 'disabled-button': isFirstPage() }"
+    >
+      Página Anterior
+    </button>
+    <button
+      (click)="goToNextPage()"
+      [disabled]="currentPageIndex === images.length / pageSize - 1"
+      [ngClass]="{
+        'disabled-button': isLastPage()
+      }"
+    >
+      Página Siguiente
+    </button>
+    <button (click)="startSlideshow()" *ngIf="!slideshowRunning">Play</button>
+    <button (click)="stopSlideshow()" *ngIf="slideshowRunning">Stop</button>
+  </div>
+</div>

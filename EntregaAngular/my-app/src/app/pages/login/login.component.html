@@ -1,0 +1,37 @@
+<div *ngIf="!loading" class="loginBox">
+  <form #trueForm="ngForm">
+    <div class="loginInput">
+      <label>User</label>
+      <input
+        type="text"
+        name="user"
+        placeholder="User"
+        required
+        [(ngModel)]="user.userName"
+      />
+    </div>
+    <div class="loginInput">
+      <label>Password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required
+        minlength="6"
+        [(ngModel)]="user.password"
+        #passw="ngModel"
+      />
+    </div>
+    <div *ngIf="passw.invalid && passw.touched">
+      Min password length is 6 characters
+    </div>
+    <button [disabled]="trueForm.invalid" (click)="onSubmit()" type="submit">
+      Login
+    </button>
+  </form>
+</div>
+<img
+  *ngIf="loading"
+  src="https://media0.giphy.com/media/xTkcEQACH24SMPxIQg/200w.webp?cid=ecf05e471mgv4exc509it0t6s8wmqcrly9sdct4hvwqa18pw&ep=v1_gifs_search&rid=200w.webp&ct=g"
+  alt="Loading"
+/>
