@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@testing-library/vue": "^7.0.0",
+    "@types/node": "^18.17.3",
+    "happy-dom": "^10.11.0",
+    "nuxt": "^3.6.5",
+    "nuxt-vitest": "^0.10.2",
+    "vitest": "^0.33.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.6"
+  }
+}
