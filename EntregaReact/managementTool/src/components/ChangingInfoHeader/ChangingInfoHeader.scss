@@ -1,0 +1,14 @@
+.changingInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+
+.statesContainer {
+    display: flex;
+}
+
+.statesContainer input {
+    width: 40px;
+}

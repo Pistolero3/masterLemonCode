@@ -1,0 +1,35 @@
+.tableContainer {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 20px 30px 30px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1cc86;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fbf5be;
+}
+
+thead tr {
+    background-color: rgb(201, 197, 197);
+}
