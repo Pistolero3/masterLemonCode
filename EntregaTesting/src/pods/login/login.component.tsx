@@ -1,6 +1,7 @@
 import React from 'react';
 import { ContainerComponent, LoginFormComponent } from './components';
 import { Login } from './login.vm';
+import { ConfirmationDialogComponent } from 'common/components/confirmation-dialog';
 
 interface Props {
   onLogin: (login: Login) => void;

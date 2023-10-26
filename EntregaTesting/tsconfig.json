@@ -9,7 +9,6 @@
     "jsx": "react",
     "noLib": false,
     "allowJs": true,
-    "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "baseUrl": "./src/",
@@ -22,5 +21,10 @@
       "scenes": ["scenes"]
     }
   },
-  "include": ["./src/**/*", "./config/test/setup.ts", "./global.types.d.ts"]
+  "include": [
+    "./src/**/*",
+    "./config/test/setup.ts",
+    "./global.types.d.ts",
+    "./config/test/setup-after.ts"
+  ]
 }

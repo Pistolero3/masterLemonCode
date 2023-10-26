@@ -1,4 +1,4 @@
-import { mapToCollection } from 'common/mappers';
+import { mapToCollection } from '../../common/mappers';
 import * as apiModel from './api/employee.api-model';
 import * as viewModel from './employee.vm';
 
@@ -11,7 +11,7 @@ const mapProjectSummaryFromApiToVm = (
 const mapProjectSummaryListFromApiToVm = (
   projectSummary: apiModel.ProjectSummary[]
 ): viewModel.ProjectSummary[] =>
-  mapToCollection(projectSummary, ps => mapProjectSummaryFromApiToVm(ps));
+  mapToCollection(projectSummary, (ps) => mapProjectSummaryFromApiToVm(ps));
 
 export const mapEmployeeFromApiToVm = (
   employee: apiModel.Employee

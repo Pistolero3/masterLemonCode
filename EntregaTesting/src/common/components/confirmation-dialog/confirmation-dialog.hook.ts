@@ -1,7 +1,11 @@
 import React from 'react';
-import { createEmptyLookup, Lookup } from 'common/models';
+import { Lookup } from 'common/models';
 
 export const useConfirmationDialog = () => {
+  const createEmptyLookup = (): Lookup => ({
+    id: '',
+    name: '',
+  });
   const [isOpen, setIsOpen] = React.useState(false);
   const [itemToDelete, setItemToDelete] = React.useState(createEmptyLookup());
 
